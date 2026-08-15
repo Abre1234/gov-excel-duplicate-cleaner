@@ -1,0 +1,44 @@
+name: Government Excel Cleaner CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Test app imports
+      run: |
+        python -c "import app; print('✅ app.py imports successfully')"
+        python -c "import translations; print('✅ translations.py imports successfully')"
+        python -c "from modules.excel_handler import ExcelHandler; print('✅ ExcelHandler imports')"
+        python -c "from modules.duplicate_detector import DuplicateDetector; print('✅ DuplicateDetector imports')"
+        python -c "from modules.cleaner import DataCleaner; print('✅ DataCleaner imports')"
+        python -c "from modules.report_generator import ReportGenerator; print('✅ ReportGenerator imports')"
+    
+    - name: Check required files
+      run: |
+        test -f app.py && echo "✅ app.py exists" || exit 1
+        test -f translations.py && echo "✅ translations.py exists" || exit 1
+        test -f requirements.txt && echo "✅ requirements.txt exists" || exit 1
+        test -d modules && echo "✅ modules/ directory exists" || exit 1
+        test -f .streamlit/config.toml && echo "✅ config.toml exists" || exit 1
+    
+    - name: Success
+      run: echo "✅ All checks passed! Ready for deployment."
