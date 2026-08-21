@@ -1,8 +1,8 @@
-# 🏛️ Government Excel Duplicate Row Cleaner
+# 🏛️ Excel Duplicate Row Cleaner
 
 **Official Data Quality Management System**
 
-A professional, bilingual (English/አማርኛ) web-based tool for detecting and removing duplicate rows in Excel files, designed specifically for government institutional use.
+A professional, bilingual (English/አማርኛ) web-based tool for detecting and removing duplicate rows in Excel files, designed specifically for institutional use.
 
 ![Government Badge](https://img.shields.io/badge/Government-Official%20System-003DA5)
 ![Language](https://img.shields.io/badge/Language-English%20%7C%20አማርኛ-00843D)
@@ -22,7 +22,7 @@ A professional, bilingual (English/አማርኛ) web-based tool for detecting an
   - Comprehensive analysis report
 
 ### Design & Security
-- **🏛️ Government-Appropriate Design**: Official colors (Blue, Green, Gold) - NO BLACK
+- **🏛️ Appropriate Design**: Official colors (Blue, Green, Gold) 
 - **🔒 100% Private Processing**: All data processed locally, no external sharing
 - **📱 Responsive**: Works on desktop, tablet, and mobile devices
 - **🔐 Secure**: No permanent file storage, HTTPS ready
@@ -221,12 +221,12 @@ This project is provided for institutional government use.
 ## 📧 Contact
 
 For support or inquiries:
-- **GitHub**: [Create an issue](https://github.com/YOUR_USERNAME/gov-excel-cleaner/issues)
-- **Email**: your.email@government.et
+- **GitHub**: [Create an issue](https://github.com/Abre1234/gov-excel-cleaner/issues)
+- **Email**: abrarawayal@gmail.com
 
 ## 🙏 Acknowledgments
 
-- Designed for Ethiopian Government institutions
+- Designed for Ethiopian institutions
 - Built with Streamlit framework
 - Amharic language support
 
