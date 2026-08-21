@@ -24,7 +24,7 @@ from translations import get_text
 
 # Page configuration
 st.set_page_config(
-    page_title="Government Excel Duplicate Cleaner",
+    page_title=" Excel Duplicate Cleaner",
     page_icon="🏛️",
     layout="wide",
     initial_sidebar_state="expanded"
